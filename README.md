@@ -11,4 +11,4 @@ a. For a given stock,
 
     4. Calculate Volume Weighted Stock Price based on trades in past 15 minutes: ExchangeService.calculateVolumeWeightedStockPrice
 
-b. Calculate the GBCE All Share Index using the geometric mean of prices? for all stocks: ExchangeService.calculateShareIndex
+b. Calculate the GBCE All Share Index using the geometric mean of prices for all stocks: ExchangeService.calculateShareIndex
