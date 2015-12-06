@@ -1,4 +1,4 @@
-package com.jpmorgan.supersimplestocks;
+package com.jpmorgan.supersimplestocks.service;
 
 import com.jpmorgan.supersimplestocks.domain.CommonStock;
 import com.jpmorgan.supersimplestocks.domain.PreferredStock;
