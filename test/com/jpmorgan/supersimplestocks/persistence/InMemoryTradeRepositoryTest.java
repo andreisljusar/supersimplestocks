@@ -29,7 +29,6 @@ public class InMemoryTradeRepositoryTest {
 
         tradeRepository.insert(trade);
 
-        //TODO: 05-Dec-15 Andrei Sljusar: hamcrest
         assertEquals(1, tradeRepository.findAll().size());
     }
 

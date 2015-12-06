@@ -10,6 +10,7 @@ import org.junit.Test;
 import java.math.BigDecimal;
 
 import static com.jpmorgan.supersimplestocks.domain.CommonStockBuilder.aCommonStock;
+import static com.jpmorgan.supersimplestocks.domain.PreferredStockBuilder.aPreferredStock;
 import static org.junit.Assert.assertEquals;
 
 //TODO: 05-Dec-15 Andrei Sljusar: AbstractDividendYieldCalculationStrategyTest
@@ -31,11 +32,7 @@ public class DividendYieldCalculationStrategyTest {
 
         DividendYieldCalculationStrategy strategy = new PreferredStockYieldCalculationStrategy();
 
-        //TODO: 05-Dec-15 Andrei Sljusar: builder
-        PreferredStock stock = new PreferredStock();
-        stock.setSymbol("GIN");
-        stock.setFixedDividend(new BigDecimal("2"));
-        stock.setParValue(new BigDecimal("100"));
+        PreferredStock stock = aPreferredStock().setSymbol("GIN").setFixedDividend(new BigDecimal("2")).setParValue(new BigDecimal("100")).build();
 
         BigDecimal dividendYield = strategy.calculateDividendYield(stock, new BigDecimal("5.2"));
 
