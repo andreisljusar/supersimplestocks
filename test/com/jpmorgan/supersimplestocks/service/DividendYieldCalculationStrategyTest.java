@@ -2,9 +2,6 @@ package com.jpmorgan.supersimplestocks.service;
 
 import com.jpmorgan.supersimplestocks.domain.CommonStock;
 import com.jpmorgan.supersimplestocks.domain.PreferredStock;
-import com.jpmorgan.supersimplestocks.service.CommonStockDividendYieldCalculationStrategy;
-import com.jpmorgan.supersimplestocks.service.DividendYieldCalculationStrategy;
-import com.jpmorgan.supersimplestocks.service.PreferredStockYieldCalculationStrategy;
 import org.junit.Test;
 
 import java.math.BigDecimal;
