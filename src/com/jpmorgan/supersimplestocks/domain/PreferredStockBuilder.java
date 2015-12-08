@@ -2,19 +2,14 @@ package com.jpmorgan.supersimplestocks.domain;
 
 import java.math.BigDecimal;
 
-public class PreferredStockBuilder<B extends PreferredStockBuilder<B>> extends StockBuilder<B> {
+public class PreferredStockBuilder<B extends PreferredStockBuilder<B>> extends StockBuilder<PreferredStock, B> {
 
     public static PreferredStockBuilder<?> aPreferredStock() {
         return new PreferredStockBuilder();
     }
 
     @Override
-    public PreferredStock build() {
-        return (PreferredStock) super.build();
-    }
-
-    @Override
-    protected Stock createObject() {
+    protected PreferredStock createObject() {
         return new PreferredStock();
     }
 

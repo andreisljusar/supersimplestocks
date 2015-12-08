@@ -2,7 +2,7 @@ package com.jpmorgan.supersimplestocks.domain;
 
 import java.math.BigDecimal;
 
-public abstract class StockBuilder<B extends StockBuilder> extends Builder<Stock> {
+public abstract class StockBuilder<T extends Stock, B extends StockBuilder> extends Builder<Stock> {
 
     @SuppressWarnings("unchecked")
     public B setSymbol(String symbol) {
@@ -29,4 +29,12 @@ public abstract class StockBuilder<B extends StockBuilder> extends Builder<Stock
     public B setLastDividend(int lastDividend) {
         return setLastDividend(BigDecimal.valueOf(lastDividend));
     }
+
+	@Override
+	protected abstract T createObject();
+
+	@Override
+	public T build() {
+		return (T) super.build();
+	}
 }

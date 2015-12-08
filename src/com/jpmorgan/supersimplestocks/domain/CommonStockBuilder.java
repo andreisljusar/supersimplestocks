@@ -1,18 +1,13 @@
 package com.jpmorgan.supersimplestocks.domain;
 
-public class CommonStockBuilder<B extends CommonStockBuilder<B>> extends StockBuilder<B> {
+public class CommonStockBuilder<B extends CommonStockBuilder<B>> extends StockBuilder<CommonStock, B> {
 
     public static CommonStockBuilder<?> aCommonStock() {
         return new CommonStockBuilder();
     }
 
     @Override
-    protected Stock createObject() {
+    protected CommonStock createObject() {
         return new CommonStock();
-    }
-
-    @Override
-    public CommonStock build() {
-        return (CommonStock) super.build();
     }
 }
